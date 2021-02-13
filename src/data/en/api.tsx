@@ -308,73 +308,7 @@ export default {
           on HTML standard and also allow custom validation.
         </p>
 
-        <p>
-          By invoking the register function and supply input's name, you will
-          receive the following methods:
-        </p>
-
-        <div className={tableStyles.tableWrapper}>
-          <table className={tableStyles.table}>
-            <thead>
-              <tr>
-                <th>{generic.name.en}</th>
-                <th>{generic.type.en}</th>
-                <th>{generic.description.en}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <code>onChange</code>
-                </td>
-                <td>
-                  <code className={typographyStyles.typeText}>
-                    ChangeHandler
-                  </code>
-                </td>
-                <td>
-                  <p>
-                    <code>onChange</code> prop to subscribe the input change
-                    event.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code>onBlur</code>
-                </td>
-                <td>
-                  <code className={typographyStyles.typeText}>
-                    ChangeHandler
-                  </code>
-                </td>
-                <td>
-                  <p>
-                    <code>onBlur</code> prop to subscribe the input blur event.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code>ref</code>
-                </td>
-                <td>
-                  <code
-                    className={typographyStyles.typeText}
-                  >{`React.Ref<any>`}</code>
-                </td>
-                <td>
-                  <p>Input reference for hook form to register.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>
-          <b className={typographyStyles.note}>Important</b> rules to follow for
-          name:{" "}
-        </p>
+        <h2 className={typographyStyles.subTitle}>Rules</h2>
 
         <ul>
           <li>
@@ -794,12 +728,12 @@ reset({ deepNest: { file: new File() } });
           </li>
         </ul>
 
+        <h2 className={typographyStyles.subTitle}>Props</h2>
+
         <p>
           <code>Reset</code> have the ability remain formState update, here are
           the options in detail:{" "}
         </p>
-
-        <h2 className={typographyStyles.props}>Props</h2>
 
         <div className={tableStyles.tableWrapper}>
           <table className={tableStyles.table}>
@@ -969,7 +903,7 @@ reset({ deepNest: { file: new File() } });
           </li>
         </ul>
 
-        <h2 className={typographyStyles.props}>Props</h2>
+        <h2 className={typographyStyles.subTitle}>Props</h2>
 
         <div className={tableStyles.tableWrapper}>
           <table className={tableStyles.table}>
@@ -1119,7 +1053,7 @@ setValue('yourDetails', { firstName: 'value' }); // less performant `}
           withOutCopy
         />
 
-        <h2 className={typographyStyles.props}>Props</h2>
+        <h2 className={typographyStyles.subTitle}>Props</h2>
 
         <div className={tableStyles.tableWrapper}>
           <table className={tableStyles.table}>
@@ -1212,9 +1146,8 @@ setValue('yourDetails', { firstName: 'value' }); // less performant `}
           </table>
         </div>
 
-        <p>
-          <b className={typographyStyles.note}>Important notes: </b>
-        </p>
+        <h2 className={typographyStyles.subTitle}>Rules</h2>
+
         <ul>
           <li>
             <p>
@@ -1295,7 +1228,7 @@ setValue('yourDetails', { firstName: 'value' }); // less performant `}
           to compare controlled vs uncontrolled Field Array.
         </p>
 
-        <h2 className={typographyStyles.props}>Props</h2>
+        <h2 className={typographyStyles.subTitle}>Props</h2>
 
         <div className={tableStyles.tableWrapper}>
           <table className={tableStyles.table}>

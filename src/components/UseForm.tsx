@@ -69,7 +69,13 @@ const { register } = useForm<FormInputs>({
 })`}
             />
 
-            <h5 className={typographyStyles.h5}>
+            <h2 className={typographyStyles.subTitle}>Props</h2>
+            <p>
+              Blow are all the props that <code>useForm</code> accepts as
+              options.
+            </p>
+
+            <h5 className={typographyStyles.h5} style={{ marginTop: 20 }}>
               <code>
                 mode:{" "}
                 <span className={typographyStyles.typeText}>

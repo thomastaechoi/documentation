@@ -397,7 +397,8 @@ export default function ApiRefTable({
                 </p>
                 <p>
                   <b className={typographyStyles.note}>Note</b>:{" "}
-                  <code>valueAs</code> process is happening after validation.
+                  <code>valueAs</code> process is happening{" "}
+                  <strong>before</strong> validation.
                 </p>
               </td>
               <td>
@@ -426,7 +427,8 @@ export default function ApiRefTable({
                 </p>
                 <p>
                   <b className={typographyStyles.note}>Note</b>:{" "}
-                  <code>valueAs</code> process is happening after validation.
+                  <code>valueAs</code> process is happening{" "}
+                  <strong>before</strong> validation.
                 </p>
               </td>
               <td>
@@ -454,8 +456,9 @@ export default function ApiRefTable({
                 <p>Return input value by running through the function.</p>
                 <p>
                   <b className={typographyStyles.note}>Note</b>:{" "}
-                  <code>valueAs</code> process is happening after validation.
-                  Also, <code>setValueAs</code> is ignored if either{" "}
+                  <code>valueAs</code> process is happening{" "}
+                  <strong>before</strong> validation. Also,{" "}
+                  <code>setValueAs</code> is ignored if either{" "}
                   <code>valueAsNumber</code> or <code>valueAsDate</code> are{" "}
                   <code>true</code>.
                 </p>
@@ -477,6 +480,71 @@ export default function ApiRefTable({
             </tr>
           </tbody>
         </table>
+
+        <h2 className={typographyStyles.subTitle}>Return</h2>
+
+        <p>
+          By invoking the register function and supply input's name, you will
+          receive the following methods:
+        </p>
+
+        <div className={tableStyles.tableWrapper}>
+          <table className={tableStyles.table}>
+            <thead>
+              <tr>
+                <th>{generic.name.en}</th>
+                <th>{generic.type.en}</th>
+                <th>{generic.description.en}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>onChange</code>
+                </td>
+                <td>
+                  <code className={typographyStyles.typeText}>
+                    ChangeHandler
+                  </code>
+                </td>
+                <td>
+                  <p>
+                    <code>onChange</code> prop to subscribe the input change
+                    event.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>onBlur</code>
+                </td>
+                <td>
+                  <code className={typographyStyles.typeText}>
+                    ChangeHandler
+                  </code>
+                </td>
+                <td>
+                  <p>
+                    <code>onBlur</code> prop to subscribe the input blur event.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>ref</code>
+                </td>
+                <td>
+                  <code
+                    className={typographyStyles.typeText}
+                  >{`React.Ref<any>`}</code>
+                </td>
+                <td>
+                  <p>Input reference for hook form to register.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <CodeArea
           rawData={register}
