@@ -33,7 +33,10 @@
 }
 
 .subTitle:before {
-  content: "▸ ";
+  content: "ⓘ ";
+  font-size: 16px;
+  top: -1px;
+  position: relative;
 }
 
 .title:before,
