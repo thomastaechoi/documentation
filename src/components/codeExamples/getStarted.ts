@@ -321,12 +321,7 @@ function App() {
         control={control}
         defaultValue={false}
         rules={{ required: true }}
-        render={({ field }) =>
-          <Checkbox
-            onChange={e => field.onChange(e.target.checked)}
-            checked={field.value}
-          />
-        }
+        render={({ field }) => <Checkbox {...field} />}
       />
     </form>
   );
@@ -355,12 +350,7 @@ function App() {
         control={control}
         defaultValue={false}
         rules={{ required: true }}
-        render={({ field }) =>
-          <Checkbox
-            onChange={e => field.onChange(e.target.checked)}
-            checked={field.value}
-          />
-        }
+        render={({ field }) => <Checkbox {...field} />}
       />
     </form>
   );
@@ -399,9 +389,9 @@ export default function App() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Input {...register("firstName", { required: true })} />
-      {errors.firstName && "First name is required"}
+      {errors.firstName && <p>First name is required</p>}
       <Input {...register("lastName", { required: true })} />
-      {errors.lastName && "Last name is required"}
+      {errors.lastName && <p>Last name is required</p>}
       <input type="submit" />
     </form>
   );
@@ -422,9 +412,9 @@ export default function App() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Input {...register("firstName", { required: true })} />
-      {errors.firstName && "First name is required"}
+      {errors.firstName && <p>First name is required</p>}
       <Input {...register("lastName", { required: true })} />
-      {errors.lastName && "Last name is required"}
+      {errors.lastName && <p>Last name is required</p>}
       <input type="submit" />
     </form>
   );

@@ -238,8 +238,16 @@ export default {
             rel="noopener noreferrer"
           >
             Superstruct
-          </a>{" "}
-          &{" "}
+          </a>
+          ,{" "}
+          <a
+            href="https://github.com/ealush/vest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vest
+          </a>
+          , &{" "}
           <a
             href="https://github.com/hapijs/joi"
             target="_blank"

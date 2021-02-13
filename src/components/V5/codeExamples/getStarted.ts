@@ -190,9 +190,9 @@ export default function App() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Input name="firstName" ref={register({ required: true })} />
-      {errors.firstName && "First name is required"}
+      {errors.firstName && <p>First name is required</p>}
       <Input name="lastName" ref={register({ required: true })} />
-      {errors.lastName && "Last name is required"}
+      {errors.lastName && <p>Last name is required</p>}
       <input type="submit" />
     </form>
   );

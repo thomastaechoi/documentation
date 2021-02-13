@@ -1,5 +1,5 @@
 export default `import React from "react";
-import { Text, View, TextInput, Button, Alert } from "react-native";
+import { Text, View, TextInput, Button } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 
 export default function App() {
