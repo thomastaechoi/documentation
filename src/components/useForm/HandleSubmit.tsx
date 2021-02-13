@@ -31,7 +31,7 @@ export default ({ currentLanguage }) => {
                 handleSubmit: <br />
                 <span className={typographyStyles.typeText}>
                   ((data: Object, e?: Event) =&gt; void, (errors: Object, e?:
-                  Event) =&gt; void) =&gt; Function
+                  Event) =&gt; void) =&gt; void
                 </span>
               </h2>
             </code>

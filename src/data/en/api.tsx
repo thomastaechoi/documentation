@@ -685,6 +685,38 @@ handleSubmit(async (data) => await fetchAPI(data))`}
           <b className={typographyStyles.note}>Note:</b> <code>disabled</code>{" "}
           input will not be returned as submission result.
         </p>
+
+        <h2 className={typographyStyles.subTitle}>Props</h2>
+
+        <div className={tableStyles.tableWrapper}>
+          <table className={tableStyles.table}>
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>SubmitHandler</td>
+                <td>
+                  <code
+                    className={typographyStyles.typeText}
+                  >{`(data: Object, e?: Event) => void`}</code>
+                </td>
+                <td>A successful callback.</td>
+              </tr>
+              <tr>
+                <td>SubmitErrorHandler</td>
+                <td>
+                  <code
+                    className={typographyStyles.typeText}
+                  >{`(errors: Object, e?: Event) => void) => void`}</code>
+                </td>
+                <td>An error callback.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </>
     ),
   },
@@ -762,6 +794,17 @@ reset({ deepNest: { file: new File() } });
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>
+                  <code>values</code>
+                </td>
+                <td>
+                  <code className={typographyStyles.typeText}>object</code>
+                </td>
+                <td>
+                  <p>An optional object to reset from values.</p>
+                </td>
+              </tr>
               <tr>
                 <td>
                   <code>keepErrors</code>
@@ -983,6 +1026,46 @@ reset({ deepNest: { file: new File() } });
           This function can manually clear errors in the form. This will not
           affect the validation rules attached to each inputs.
         </p>
+
+        <h2 className={typographyStyles.subTitle}>Props</h2>
+
+        <table className={tableStyles.table}>
+          <tbody>
+            <tr>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>
+                <code className={typographyStyles.typeText}>undefined</code>
+              </td>
+              <td>Remove all errors.</td>
+              <td>
+                <code>clearErrors()</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code className={typographyStyles.typeText}>string</code>
+              </td>
+              <td>Remove single error.</td>
+              <td>
+                <code>clearErrors("yourDetails.firstName")</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code className={typographyStyles.typeText}>string[]</code>
+              </td>
+              <td>Remove multiple errors.</td>
+              <td>
+                <code>clearErrors(["yourDetails.lastName"])</code>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
         <ul>
           <li>
             <p>
@@ -1203,27 +1286,54 @@ setValue('yourDetails', { firstName: 'value' }); // less performant `}
     title: "trigger",
     description: (
       <>
-        <p>Manually triggers form validation.</p>
+        <p>
+          Manually triggers form or input validation. This method is also useful
+          when you have dependant validation as react hook form focus a single
+          field validation at a time.
+        </p>
+        <h2 className={typographyStyles.subTitle}>Props</h2>
 
-        <ul>
-          <li>
-            <p>
-              <code>trigger()</code>: Triggers validation on all fields.
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>trigger('test')</code>: Triggers validation on a specific
-              field value by <strong>name</strong>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>trigger(['test', 'test1'])</code>: Triggers validation on
-              multiple fields by <strong>name</strong>.
-            </p>
-          </li>
-        </ul>
+        <table className={tableStyles.table}>
+          <tbody>
+            <tr>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>
+                <code className={typographyStyles.typeText}>undefined</code>
+              </td>
+              <td>Triggers validation on all fields.</td>
+              <td>
+                <code>trigger()</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code className={typographyStyles.typeText}>string</code>
+              </td>
+              <td>
+                Triggers validation on a specific field value by{" "}
+                <strong>name</strong>
+              </td>
+              <td>
+                <code>trigger("yourDetails.firstName")</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code className={typographyStyles.typeText}>string[]</code>
+              </td>
+              <td>
+                Triggers validation on multiple fields by <strong>name</strong>.
+              </td>
+              <td>
+                <code>trigger(["yourDetails.lastName"])</code>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </>
     ),
   },
