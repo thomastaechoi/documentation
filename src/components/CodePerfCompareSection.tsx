@@ -1,5 +1,4 @@
 import * as React from "react"
-import { SimpleImg } from "react-simple-img"
 import { AnimateGroup, Animate } from "react-simple-animate"
 import formik from "../images/formik.min.png"
 import hookFrom from "../images/hookform.min.png"
@@ -188,11 +187,11 @@ function CodePerfCompareSection({
             <b className={typographyStyles.note}>1800ms</b>
           </li>
         </ul>
-        <SimpleImg
+        <img
           src={hookFrom}
-          placeholder={false}
           height={163}
           alt="React Hook Form performance"
+          loading="lazy"
         />
       </div>
 
@@ -206,11 +205,11 @@ function CodePerfCompareSection({
             <b className={typographyStyles.note}>2070ms</b>
           </li>
         </ul>
-        <SimpleImg
+        <img
           height={230}
           src={formik}
-          placeholder={false}
           alt="Formik performance"
+          loading="lazy"
         />
       </div>
 
@@ -223,11 +222,11 @@ function CodePerfCompareSection({
             <b className={typographyStyles.note}>2380ms</b>
           </li>
         </ul>
-        <SimpleImg
+        <img
           height={365}
           src={reduxForm}
-          placeholder={false}
           alt="Redux Form performance"
+          loading="lazy"
         />
       </div>
     </AnimateGroup>

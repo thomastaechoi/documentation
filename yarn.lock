@@ -8325,11 +8325,6 @@ internal-slot@^1.0.2:
     has "^1.0.3"
     side-channel "^1.0.2"
 
-intersection-observer@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.1.tgz#e340fc56ce74290fe2b2394d1ce88c4353ac6dfa"
-  integrity sha512-Zd7Plneq82kiXFixs7bX62YnuZ0BMRci9br7io88LwDyF3V43cQMI+G5IiTlTNTt+LsDUppl19J/M2Fp9UkH6g==
-
 into-stream@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/into-stream/-/into-stream-3.1.0.tgz#96fb0a936c12babd6ff1752a17d05616abd094c6"
@@ -12045,13 +12040,6 @@ react-simple-animate@^3.3.8:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/react-simple-animate/-/react-simple-animate-3.3.10.tgz#e2feee7f01afe913979063f2581eefa6a8dba617"
   integrity sha512-iPvhRFmpQecldbE3coA3fqYGCuYaYV3K7WiUtsHa2ql+PdBUCyKXj9+6CU7k8NlFnv37X9kmXC9QAcWNUhaL8g==
-
-react-simple-img@2.3.7:
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/react-simple-img/-/react-simple-img-2.3.7.tgz#9e1362f41e809017b5b811839663eac23e8dc31b"
-  integrity sha512-KqcFEQIdeDhx2VlDGt48YITU60UFVfAy5AutPze1GrZmyJrqMIoHTPJln2+V5hrqpjHxE57DnXyMnECGEu/dlQ==
-  dependencies:
-    intersection-observer "^0.5.1"
 
 react-sortablejs@1.5.1:
   version "1.5.1"
