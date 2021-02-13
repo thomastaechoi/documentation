@@ -251,24 +251,32 @@ export default {
         </p>
 
         <div className={tableStyles.tableWrapper}>
-          <CodeArea
-            rawData={`<input {...register('yourDetails.firstName')} />
-<input {...register('yourDetails.lastName')} />
-`}
-          />
+          <h2 className={typographyStyles.subTitle}>Props</h2>
 
           <p>
             Below example shows what to expect when you invoke{" "}
             <code>unregister</code> method.
           </p>
 
+          <CodeArea
+            rawData={`<input {...register('yourDetails.firstName')} />
+<input {...register('yourDetails.lastName')} />
+`}
+          />
+
           <table className={tableStyles.table}>
             <tbody>
               <tr>
+                <th>Type</th>
                 <th>Input Name</th>
                 <th>Example</th>
               </tr>
               <tr>
+                <td>
+                  <code className={typographyStyles.typeText}>
+                    string // as key name
+                  </code>
+                </td>
                 <td>
                   <code>unregister("yourDetails")</code>
                 </td>
@@ -278,6 +286,9 @@ export default {
               </tr>
               <tr>
                 <td>
+                  <code className={typographyStyles.typeText}>string</code>
+                </td>
+                <td>
                   <code>unregister("yourDetails.firstName")</code>
                 </td>
                 <td>
@@ -285,6 +296,9 @@ export default {
                 </td>
               </tr>
               <tr>
+                <td>
+                  <code className={typographyStyles.typeText}>string[]</code>
+                </td>
                 <td>
                   <code>unregister(["yourDetails.lastName"])</code>
                 </td>
@@ -422,8 +436,9 @@ const { onChange } = register('lastChange'); // this onChange method can update 
           optional array.
         </p>
 
+        <h2 className={typographyStyles.subTitle}>Rules</h2>
+
         <p>
-          <b className={typographyStyles.note}>Important:</b>{" "}
           <code>formState</code> is wrapped with{" "}
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy"
@@ -594,6 +609,8 @@ return <button disabled={isDirty || isValid} />;
           This will watch specified inputs and return their values. It is useful
           for determining what to render.
         </p>
+
+        <h2 className={typographyStyles.subTitle}>Rules</h2>
 
         <ul>
           <li>
